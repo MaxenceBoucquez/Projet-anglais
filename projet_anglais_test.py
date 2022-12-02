@@ -24,21 +24,21 @@ blackKeyWidth = screenWidth / 48
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
 def clicked(event):
-    if(event.x < ()):
+    if(event.x < whiteKeyWidth):
         play("do1")
-    elif(event.x < (whiteKeyWidth * 2)):
+    elif(event.x < whiteKeyWidth * 2):
         play("re")
-    elif(event.x < (whiteKeyWidth * 3)):
+    elif(event.x < whiteKeyWidth * 3):
         play("mi")
-    elif(event.x < (whiteKeyWidth * 4)):
+    elif(event.x < whiteKeyWidth * 4):
         play("fa")
-    elif(event.x < (whiteKeyWidth * 5)):
+    elif(event.x < whiteKeyWidth * 5):
         play("sol")
-    elif(event.x < (whiteKeyWidth * 6)):
+    elif(event.x < whiteKeyWidth * 6):
         play("la")
-    elif(event.x < (whiteKeyWidth * 7)):
+    elif(event.x < whiteKeyWidth * 7):
         play("si")
-    elif(event.x < (whiteKeyWidth * 8)):
+    elif(event.x < whiteKeyWidth * 8):
         play("do2")
 
 
