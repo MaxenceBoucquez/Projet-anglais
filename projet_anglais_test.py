@@ -10,19 +10,19 @@ root = Tk()
 def clicked(event):
     if(event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("do1")      # Play sound on Linux, for the Raspberry PI
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 2) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 2) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("re")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("mi")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *4)and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *4)and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("fa")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("sol")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("la")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("si")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("do2")
 
 # Definition of the canva
@@ -44,9 +44,6 @@ for i in range(0,6):
             (drawCanv.winfo_screenwidth()/8)*(i+1)+5+(drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/(8/5),\
             outline='black', fill='black')
             
-
-drawCanv.tag_bind("rectangle","<Button-1>",clicked)
-
 
 drawCanv.tag_bind("rectangle","<Button-1>",clicked)
 
