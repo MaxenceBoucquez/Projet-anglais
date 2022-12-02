@@ -41,7 +41,7 @@ for i in range(0,9):
 
 # Drawing of the black keys of the piano
 for i in range(0,6):
-    if(i!=2):
+    if(i!=3):
         rectangle = drawCanv.create_rectangle(
             (drawCanv.winfo_screenwidth()/8) * i+5 * (drawCanv.winfo_screenwidth()/48),0,
             (drawCanv.winfo_screenwidth()/8) * (i+1) + 5 + (drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/(8/5),\
