@@ -9,21 +9,21 @@ root = Tk()
 
 def clicked(event):
     if(event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("do1.wav")      # Play sound on Linux, for the Raspberry PI
+        play("do1")      # Play sound on Linux, for the Raspberry PI
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 2) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("re.wav")
+        play("re")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("mi.wav")
+        play("mi")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *4)and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("fa.wav")
+        play("fa")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("sol.wav")
+        play("sol")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("la.wav")
+        play("la")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("si.wav")
+        play("si")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("do2.wav")
+        play("do2")
 
 # Definition of the canva
 root.attributes('-fullscreen',True)
