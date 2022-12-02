@@ -7,10 +7,9 @@ root = Tk()
 root.attributes('-fullscreen',True)
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
-
 def clicked(event):
     if(event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        play("do1")      # Play sound on Linux, for the Raspberry PI
+        play("do1")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 2) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("re")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
