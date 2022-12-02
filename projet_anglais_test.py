@@ -15,7 +15,7 @@ def clicked(event):
         play("re")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("mi")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 4)and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 4) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("fa")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("sol")
@@ -31,7 +31,7 @@ drawCanv = Canvas(
     width = root.winfo_screenwidth(), 
     height = root.winfo_screenheight(),
     bd = 0)
-    
+
 drawCanv.bind('<Button>', clicked) 
 # Drawing of the white keys of the piano
 for i in range(0,9):
