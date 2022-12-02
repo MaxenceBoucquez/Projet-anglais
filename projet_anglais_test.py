@@ -18,21 +18,18 @@ def clicked(event):
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *4)and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         wave_obj = sa.WaveObject.from_wave_file("Music_notes/do1.wav")
         wave_obj.play()
-        # os.system("mpg123 " + "Music_notes/fa.wav")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        # PlaySound('Music_notes/sol.wav', SND_FILENAME)
         wave_obj = sa.WaveObject.from_wave_file("Music_notes/sol.wav")
         wave_obj.play()
-        os.system("mpg123 " + "Music_notes/sol.wav")
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        # PlaySound('Music_notes/la.wav', SND_FILENAME)
-        os.system("mpg123 " + "Music_notes/la.wav")
+        wave_obj = sa.WaveObject.from_wave_file("Music_notes/la.wav")
+        wave_obj.play()
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        # PlaySound('Music_notes/si.mp3', SND_FILENAME)
-        os.system("mpg123 " + "Music_notes/si.mp3")
+        wave_obj = sa.WaveObject.from_wave_file("Music_notes/si.wav")
+        wave_obj.play()
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
-        # PlaySound('Music_notes/do2.wav', SND_FILENAME)
-        os.system("mpg123 " + "Music_notes/do2.wav")
+        wave_obj = sa.WaveObject.from_wave_file("Music_notes/do2.wav")
+        wave_obj.play()
 
 # Definition of the canva
 root.attributes('-fullscreen',True)
