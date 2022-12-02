@@ -5,6 +5,7 @@ import simpleaudio as sa
 root = Tk() 
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
+
 def clicked(event):
     if(event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         wave_obj = sa.WaveObject.from_wave_file("Music_notes/do1.wav")
@@ -37,13 +38,19 @@ drawCanv = Canvas (width = root.winfo_screenwidth(), height = root.winfo_screenh
 drawCanv.bind ('<Button>', clicked) 
 # Drawing of the white keys of the piano
 for i in range(0,9):
-    rectangle = drawCanv.create_rectangle ((drawCanv.winfo_screenwidth() / 8) *i, 0, (drawCanv.winfo_screenwidth() / 8) *i+1, drawCanv.winfo_screenheight(),\
-            outline = 'black')
+    rectangle = drawCanv.create_rectangle(
+        (drawCanv.winfo_screenwidth() / 8) *i, 0,
+        (drawCanv.winfo_screenwidth() / 8) *i+1, drawCanv.winfo_screenheight(),\
+        outline = 'black')
+
 # Drawing of the black keys of the piano
-# for i in range(0,6):
-#     if(i != 3):
-#         rectangle = drawCanv.create_rectangle (((drawCanv.winfo_screenwidth()/8)*i+3*(drawCanv.winfo_screenwidth()/48)), 0, ((drawCanv.winfo_screenwidth()/8) *(i+1)+(drawCanv.winfo_screenwidth()/48)), drawCanv.winfo_screenheight()/3 \
-#             outline = 'black' , fill='black')
+for i in range(0,6):
+    if(i!=3):
+        rectangle = drawCanv.create_rectangle(
+            (drawCanv.winfo_screenwidth()/8)*i+3*(drawCanv.winfo_screenwidth()/48),0,
+            (drawCanv.winfo_screenwidth()/8)*(i+1)+(drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/3,\
+            outline='black', fill='black')
+            
 
 drawCanv.tag_bind("rectangle","<Button-1>",clicked)
 
