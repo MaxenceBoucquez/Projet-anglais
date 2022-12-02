@@ -4,6 +4,7 @@ from sounds import *
 
 # Creation of the tkinter window
 root = Tk() 
+root.attributes('-fullscreen',True)
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
 
@@ -12,23 +13,26 @@ def clicked(event):
         play("do1")      # Play sound on Linux, for the Raspberry PI
     elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 2) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("re")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("mi")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) *4)and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 4) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("fa")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("sol")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("la")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("si")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8)*8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
         play("do2")
 
 # Definition of the canva
-root.attributes('-fullscreen',True)
-drawCanv = Canvas (width = root.winfo_screenwidth(), height = root.winfo_screenheight(), bd = 0)
-drawCanv.bind ('<Button>', clicked) 
+drawCanv = Canvas(
+    width = root.winfo_screenwidth(), 
+    height = root.winfo_screenheight(),
+    bd = 0)
+
+drawCanv.bind('<Button>', clicked) 
 # Drawing of the white keys of the piano
 for i in range(0,9):
     rectangle = drawCanv.create_rectangle(
