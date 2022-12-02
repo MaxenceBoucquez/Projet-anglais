@@ -48,7 +48,7 @@ for i in range(0,6):
     if(i!=3):
         rectangle = drawCanv.create_rectangle(
             (drawCanv.winfo_screenwidth()/8)*i+4*(drawCanv.winfo_screenwidth()/48),0,
-            (drawCanv.winfo_screenwidth()/8)*(i+1)+2+(drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/2.25,\
+            (drawCanv.winfo_screenwidth()/8)*(i+1)+3+(drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/(4/3),\
             outline='black', fill='black')
             
 
