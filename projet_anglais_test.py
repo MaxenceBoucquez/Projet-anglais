@@ -8,21 +8,21 @@ root.attributes('-fullscreen',True)
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
 def clicked(event):
-    if(event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    if(event.x < (drawCanv.winfo_screenwidth() / 8)):
         play("do1")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 2) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 2)):
         play("re")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 3) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 3)):
         play("mi")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 4) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 4)):
         play("fa")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 5) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 5)):
         play("sol")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 6) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 6)):
         play("la")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 7) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 7)):
         play("si")
-    elif((event.x>0 and event.x<(drawCanv.winfo_screenwidth() / 8) * 8) and event.y>0 and event.y<drawCanv.winfo_screenheight()):
+    elif(event.x < ((drawCanv.winfo_screenwidth() / 8) * 8)):
         play("do2")
 
 # Definition of the canva
