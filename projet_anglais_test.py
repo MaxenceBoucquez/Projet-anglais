@@ -32,19 +32,19 @@ drawCanv.bind ('<Button>', clicked)
 # Drawing of the white keys of the piano
 for i in range(0,9):
     rectangle = drawCanv.create_rectangle(
-        (drawCanv.winfo_screenwidth() / 8) *i, 0,
-        (drawCanv.winfo_screenwidth() / 8) *i+1, drawCanv.winfo_screenheight(),\
+        (drawCanv.winfo_screenwidth() / 8) * i, 0,
+        (drawCanv.winfo_screenwidth() / 8) * i+1, drawCanv.winfo_screenheight(),\
         outline = 'black')
 
 # Drawing of the black keys of the piano
 for i in range(0,6):
     if(i!=3):
         rectangle = drawCanv.create_rectangle(
-            (drawCanv.winfo_screenwidth()/8)*i+5*(drawCanv.winfo_screenwidth()/48),0,
-            (drawCanv.winfo_screenwidth()/8)*(i+1)+5+(drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/(8/5),\
+            (drawCanv.winfo_screenwidth()/8) * i+5 * (drawCanv.winfo_screenwidth()/48),0,
+            (drawCanv.winfo_screenwidth()/8) * (i+1) + 5 + (drawCanv.winfo_screenwidth()/48),drawCanv.winfo_screenheight()/(8/5),\
             outline='black', fill='black')
             
-
+# Map the click event to trigger sounds
 drawCanv.tag_bind("rectangle","<Button-1>",clicked)
 
 drawCanv.pack()
