@@ -1,5 +1,5 @@
-from tkinter import *
 import simpleaudio as sa
+from tkinter import *
 
 # Creation of the tkinter window
 root = Tk() 
