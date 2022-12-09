@@ -1,6 +1,7 @@
 import simpleaudio as sa
 from tkinter import *
 from sounds import *
+from datetime import *
 
 # Creation of the tkinter window
 root = Tk() 
@@ -24,6 +25,17 @@ blackKeyWidth = screenWidth / 24
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
 def clicked(event):
+    # Buttons
+    if ((event.x > drawCanv.winfo_screenwidth()-250) and (event.x < drawCanv.winfo_screenwidth()-40) and (event.y > 20) and (event.y < 80)) :
+        print("Record")
+        actualTime = datetime.now().time()
+        notes = []
+        timers = []
+        print(actualTime)
+    elif ((event.x > drawCanv.winfo_screenwidth()-250) and (event.x < drawCanv.winfo_screenwidth()-40) and (event.y > 100) and (event.y < 160)) :
+        print("Play recording")
+        print(actualTime - datetime.now().time())
+    # Keys
     if not (blackkey_click(event)):
         whitekey_click(event)
 
@@ -83,6 +95,30 @@ for i in range(1,7):
             
 # Map the click event to trigger sounds
 drawCanv.tag_bind("rectangle","<Button-1>",clicked)
+
+
+# Button record
+btn1 = drawCanv.create_rectangle(
+            drawCanv.winfo_screenwidth()-250,20,
+            drawCanv.winfo_screenwidth()-40,80,\
+            outline='black', fill='grey')
+drawCanv.create_text(drawCanv.winfo_screenwidth()-145, 50, text="RECORD", fill="black", font=('Helvetica 15 bold'))
+
+# Button play recording
+btn2 = drawCanv.create_rectangle(
+            drawCanv.winfo_screenwidth()-250,100,
+            drawCanv.winfo_screenwidth()-40,160,\
+            outline='black', fill='grey')
+drawCanv.create_text(drawCanv.winfo_screenwidth()-145, 130, text="PLAY RECORDING", fill="black", font=('Helvetica 15 bold'))
+
+# Button play demo
+btn3 = drawCanv.create_rectangle(
+            drawCanv.winfo_screenwidth()-250,180,
+            drawCanv.winfo_screenwidth()-40,240,\
+            outline='black', fill='grey')
+drawCanv.create_text(drawCanv.winfo_screenwidth()-145, 210, text="PLAY DEMO", fill="black", font=('Helvetica 15 bold'))
+
+
 
 drawCanv.pack()
 
