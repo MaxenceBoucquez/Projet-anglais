@@ -19,7 +19,7 @@ screenHeight = drawCanv.winfo_screenheight()
 # define the width of each key
 # We have 8 white keys
 whiteKeyWidth = screenWidth / 8
-blackKeyWidth = screenWidth / 24
+blackKeyWidth = screenWidth / 28
 
 
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
