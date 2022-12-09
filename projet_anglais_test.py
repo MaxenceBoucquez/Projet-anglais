@@ -1,7 +1,7 @@
 import simpleaudio as sa
 from tkinter import *
 from sounds import *
-from datetime import *
+from time import *
 
 # Creation of the tkinter window
 root = Tk() 
@@ -26,17 +26,21 @@ blackKeyWidth = screenWidth / 28
 # Definition of the event : for each key, when we click on it, it plays the appropriated sound
 def clicked(event):
     # Buttons
+    #Record Button
     if ((event.x > drawCanv.winfo_screenwidth()-250) and (event.x < drawCanv.winfo_screenwidth()-40) and (event.y > 20) and (event.y < 80)) :
         print("Record")
-        actualTime = datetime.now().time()
+        btn1
+        actualTime = time()
         notes = []
         timers = []
         print(actualTime)
+            
     elif ((event.x > drawCanv.winfo_screenwidth()-250) and (event.x < drawCanv.winfo_screenwidth()-40) and (event.y > 100) and (event.y < 160)) :
         print("Play recording")
-        print(actualTime - datetime.now().time())
+        print(actualTime - time())
+        
     # Keys
-    if not (blackkey_click(event)):
+    elif not (blackkey_click(event)):
         whitekey_click(event)
 
 def whitekey_click(event):
